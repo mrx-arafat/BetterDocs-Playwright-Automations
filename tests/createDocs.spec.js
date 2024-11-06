@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.use({ storageState: "bd-free.json" });
+test.use({ storageState: "betterdocs-arafatbytes.json" });
 
 test.setTimeout(120000);
 
@@ -8,21 +8,21 @@ test("Create multiple docs in BetterDocs with predefined titles", async ({
   page,
 }) => {
   await page.goto(
-    "http://bd-explore-free.local/wp-admin/post-new.php?post_type=docs"
+    "https://betterdocs.arafatbytes.live/wp-admin/post-new.php?post_type=docs"
   );
   console.log("Navigated directly to the 'Add New Doc' page");
 
   const titles = [
-    "1 Navigating the Cosmos: A Beginner's Guide",
-    "2 Enhancing Interstellar Travel: Performance Optimization",
-    "3 Strategies for Cosmic Exploration: Tips and Tricks",
-    "4 AI Governance: Best Practices for User Management",
-    "5 Mastering Advanced Technologies: Plugin Configurations for the Future",
-    "6 Galactic Security Protocols: Essential Practices",
-    "7 Quantum Computing: A Guide for New Explorers",
-    "8 Terraforming Planets: Strategies for Success",
-    "9 Cybernetic Enhancements: Maximizing Human Potential",
-    "10 Intergalactic Diplomacy: Best Practices for Engaging Alien Cultures",
+    "Believe You Can and You're Halfway There",
+    "The Future Belongs to Those Who Believe in the Beauty of Their Dreams",
+    "Success Is Not Final, Failure Is Not Fatal: It Is the Courage to Continue That Counts",
+    "Don't Watch the Clock; Do What It Does. Keep Going",
+    "You Miss 100% of the Shots You Don't Take",
+    "I Have Not Failed. I've Just Found 10,000 Ways That Won't Work",
+    "You Are Never Too Old to Set Another Goal or to Dream a New Dream",
+    "The Only Way to Do Great Work Is to Love What You Do",
+    "It Always Seems Impossible Until It's Done",
+    "You Don't Have to Be Great to Start, But You Have to Start to Be Great",
   ];
 
   for (let i = 0; i < titles.length; i++) {
@@ -49,7 +49,7 @@ test("Create multiple docs in BetterDocs with predefined titles", async ({
       for (let retry = 0; retry < 3; retry++) {
         try {
           await page.goto(
-            "http://bd-explore-free.local/wp-admin/post-new.php?post_type=docs"
+            "https://betterdocs.arafatbytes.live/wp-admin/post-new.php?post_type=docs"
           );
           await page.waitForLoadState("domcontentloaded");
           console.log(
