@@ -10,7 +10,7 @@ test("Create multiple pages with predefined titles", async ({ page }) => {
   );
   console.log("Navigated directly to the 'Add New Page' page");
 
-  const titles = ["ffBelieve", "dgd"];
+  const titles = ["page 01", "page 02", "page 03", "page 04"];
 
   for (let i = 0; i < titles.length; i++) {
     const title = titles[i];
