@@ -6,6 +6,7 @@ test("Login and save storage state", async ({ page }) => {
 
   // Remove the dummy password and add yours
   await page.getByLabel("Password", { exact: true }).fill("arafat");
+  await page.locator("#rememberme").check();
   await page.getByRole("button", { name: "Log In" }).click();
 
   // Save the storage state (cookies, localStorage, etc.) to a file

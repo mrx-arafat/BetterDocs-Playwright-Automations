@@ -13,18 +13,19 @@ test("Create multiple docs in BetterDocs with predefined titles", async ({
   console.log("Navigated directly to the 'Add New Doc' page");
 
   const titles = [
-    "Believe You Can and You're Halfway There",
-    "The Future Belongs to Those Who Believe in the Beauty of Their Dreams",
-    "Success Is Not Final, Failure Is Not Fatal: It Is the Courage to Continue That Counts",
-    "Don't Watch the Clock; Do What It Does. Keep Going",
-    "You Miss 100% of the Shots You Don't Take",
-    "I Have Not Failed. I've Just Found 10,000 Ways That Won't Work",
-    "You Are Never Too Old to Set Another Goal or to Dream a New Dream",
-    "The Only Way to Do Great Work Is to Love What You Do",
-    "It Always Seems Impossible Until It's Done",
-    "You Don't Have to Be Great to Start, But You Have to Start to Be Great",
+    "Start Where You Are, Use What You Have, Do What You Can",
+    "If You Can Dream It, You Can Do It",
+    "Believe in the Power of Yet",
+    "Do What You Can with All You Have, Wherever You Are",
+    "Success Starts with Self-Discipline",
+    "Think Big and Don’t Listen to People Who Tell You It Can’t Be Done",
+    "Push Yourself Because No One Else is Going to Do It for You",
+    "Opportunities Don’t Happen, You Create Them",
+    "Your Only Limit is Your Mind",
+    "Don’t Be Afraid to Fail, Be Afraid Not to Try",
+    "Small Steps Every Day Lead to Big Results",
+    "Strive for Progress, Not Perfection",
   ];
-
   for (let i = 0; i < titles.length; i++) {
     const title = titles[i];
 
@@ -40,10 +41,10 @@ test("Create multiple docs in BetterDocs with predefined titles", async ({
     console.log(`Document ${i + 1} titled "${title}" published successfully.`);
 
     await page.waitForSelector(".components-snackbar__content", {
-      timeout: 15000,
+      timeout: 30000,
     });
 
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
 
     if (i < titles.length - 1) {
       for (let retry = 0; retry < 3; retry++) {

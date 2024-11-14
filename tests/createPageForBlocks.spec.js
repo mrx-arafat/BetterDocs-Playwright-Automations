@@ -10,8 +10,14 @@ test("Create multiple pages with predefined titles", async ({ page }) => {
   );
   console.log("Navigated directly to the 'Add New Page' page");
 
-  const titles = ["page 01", "page 02", "page 03", "page 04"];
-
+  const titles = [
+    "BetterDocs Multiple KB",
+    "BetterDocs Multiple KB Tab",
+    "BetterDocs Popular Docs",
+    "BetterDocs Related Categories",
+    "Betterdocs Related Docs",
+    "Glossary Single Template",
+  ];
   for (let i = 0; i < titles.length; i++) {
     const title = titles[i];
 
@@ -30,7 +36,7 @@ test("Create multiple pages with predefined titles", async ({ page }) => {
       timeout: 15000,
     });
 
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
 
     if (i < titles.length - 1) {
       for (let retry = 0; retry < 3; retry++) {
